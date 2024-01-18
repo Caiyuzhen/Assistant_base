@@ -1,0 +1,3 @@
+# langchain # pip3 install langchain
+# langchain-openai # pip3 install langchain-openai
+openai instructor # pip3 install openai instructor
