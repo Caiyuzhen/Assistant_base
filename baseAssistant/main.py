@@ -20,8 +20,8 @@ file = client.files.create(
 
 # 1.创建 Assistant
 assistant = client.beta.assistants.create(
-	name="提示词助手"
-	instructions="你是一位图片创作的提示词高手,你可以写出非常合理的结构化的提示词"
+	name="提示词助手",
+	instructions="你是一位图片创作的提示词高手,你可以写出非常合理的结构化的提示词",
 	model="gpt-4-1106-preview",
 	tools=[
 		{"type": "retrieval"},
@@ -61,3 +61,5 @@ while True:
 messages = client.beta.threads.message.list(
 	thread_id=thread.id
 )
+
+message = messages.data[0].content.text.value
